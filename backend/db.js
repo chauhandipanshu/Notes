@@ -5,13 +5,11 @@ const database = "CloudBook";
 
 const mongoURI = "mongodb://localhost:27017/?directConnection=true";
 
-const mongoAltas =
-  "mongodb+srv://yashraj:YwME7FYiD3arJsRn@CloudBookcluster.xfndemb.mongodb.net/?retryWrites=true&w=majority";
 const connectToMongo = async () => {
   //   mongoose.set("strictQuery", false);
   try {
-    mongoose.set("strictQuery", false);
-    await mongoose.connect(`mongodb://${server}/${database}`);
+    mongoose.set("strictQuery", true);
+    await mongoose.connect(`mongodb+srv://dipanshhchauhan:0YLVboWumwrsMjRH@cluster0.nf0redb.mongodb.net/?retryWrites=true&w=majority`);
     console.log("Connected to MongoDB");
   } catch (err) {
     console.log("Failed to connect to MongoDB", err);
